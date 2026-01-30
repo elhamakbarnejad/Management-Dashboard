@@ -23,7 +23,7 @@ const CTAactionUsers = ({ path, label, loadingLabel }) => {
   );
 };
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title, path }) => {
   return (
     <div className=" flex items-center justify-between px-5 py-5 shadow border primary-border-color">
       <div>
@@ -51,51 +51,3 @@ const SectionTitle = ({ title }) => {
 };
 
 export default SectionTitle;
-
-// import { useState } from "react";
-// import { useNavigate } from "react-router";
-
-// const CTAButton = ({ label, loadingLabel, path }) => {
-//   const navigate = useNavigate();
-//   const [loading, setLoading] = useState(false);
-
-//   const clickHandler = () => {
-//     setLoading(true);
-//     setTimeout(() => {
-//       navigate(path);
-//     }, 2000);
-//   };
-
-//   return (
-//     <button
-//       onClick={clickHandler}
-//       className="px-3 py-2 primary-bg text-white rounded-md text-sm cursor-pointer hover:opacity-80 transition-all duration-150"
-//       disabled={loading}
-//     >
-//       {loading ? loadingLabel : label}
-//     </button>
-//   );
-// };
-
-// const SectionTitle = ({ title }) => {
-//   return (
-//     <div className="flex items-center justify-between px-5 py-5 shadow border primary-border-color">
-//       <h2 className="text-2xl font-bold font-IRANSansX">{title}</h2>
-
-//       <div className="flex items-center gap-2">
-//         <CTAButton
-//           label="صفحه کاربران"
-//           loadingLabel="در حال انتقال ..."
-//           path="/users"
-//         />
-//         <CTAButton
-//           label="صفحه محصولات"
-//           loadingLabel="در حال انتقال ..."
-//           path="/products"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SectionTitle;
