@@ -15,16 +15,15 @@ import { products, LastProductsTableHeadTitle } from "../../data/products";
 import { users, UsersTableHeadTitle } from "../../data/users";
 
 function ProductsTable() {
-  const [lastProducts, setLastProducts] = useState([...products]);
   const [lastUsers, setLastUsers] = useState([...users]);
 
   const Button = () => {
     return (
       <Link
-        to={"/users"}
+        to={"/"}
         className="flex items-center justify-between gap-2 primary-bg py-2 px-3 border primary-border-color cursor-pointer hover:opacity-80 transition-all duration-150"
       >
-        <span className="text-sm font-bold text-white">صفحه کاربران</span>
+        <span className="text-sm font-bold text-white">صفحه اصلی</span>
         <MdOpenInNew />
       </Link>
     );

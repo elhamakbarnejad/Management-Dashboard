@@ -29,7 +29,7 @@ const TablePagination = ({ items, setItems, itemPerPage }) => {
           })}
         >
           {i}
-        </button>
+        </button>,
       );
     }
     return pageNumberSet;
@@ -49,7 +49,7 @@ const TablePagination = ({ items, setItems, itemPerPage }) => {
       <button
         onClick={() => changePageNumberHandler(currentPage + 1)}
         disabled={currentPage === pagesQty}
-        className={clsx("pagination-prev-button", {
+        className={clsx("pagination-next-button", {
           "pages-ended active-tab": currentPage === pagesQty,
         })}
       >

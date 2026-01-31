@@ -6,7 +6,7 @@ const CTAactionUsers = ({ path, label, loadingLabel }) => {
 
   const navigate = useNavigate();
 
-  const clickHandlerUsers = () => {
+  const clickHandler = () => {
     setLoading(true);
     setTimeout(() => {
       navigate(path);
@@ -14,7 +14,7 @@ const CTAactionUsers = ({ path, label, loadingLabel }) => {
   };
   return (
     <button
-      onClick={clickHandlerUsers}
+      onClick={clickHandler}
       disabled={loading}
       className="px-3 py-2 primary-bg text-white rounded-md text-sm cursor-pointer hover:opacity-80 transition-all duration-150"
     >
@@ -23,7 +23,7 @@ const CTAactionUsers = ({ path, label, loadingLabel }) => {
   );
 };
 
-const SectionTitle = ({ title, path }) => {
+const SectionTitle = ({ title }) => {
   return (
     <div className=" flex items-center justify-between px-5 py-5 shadow border primary-border-color">
       <div>

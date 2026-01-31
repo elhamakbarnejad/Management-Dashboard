@@ -13,7 +13,7 @@ import ChangeVisibility from "../ProductsTable/components/ChangeVisibility";
 import RemoveProduct from "../ProductsTable/components/RemoveProduct";
 import { products, LastProductsTableHeadTitle } from "../../data/products";
 
-function ProductsTable() {
+const ProductsTable = () => {
   const [lastProducts, setLastProducts] = useState([...products]);
 
   const Button = () => {
@@ -69,7 +69,7 @@ function ProductsTable() {
                   <p
                     className={clsx(
                       product.isPublished ? "success-badge" : "danger-badge",
-                      "badge"
+                      "badge",
                     )}
                   >
                     {product.isPublished ? "عمومی" : "خصوصی"}
@@ -77,7 +77,8 @@ function ProductsTable() {
                 </TableBodyCell>
 
                 <TableBodyCell>
-                  <span> {product.price.toLocaleString("fa-IR")} </span> تومان{" "}
+                  <span> {product.price.toLocaleString("fa-IR")} </span>{" "}
+                  تومان{" "}
                 </TableBodyCell>
                 <TableBodyCell>
                   <div className="flex items-center justify-between gap-5">
@@ -95,6 +96,6 @@ function ProductsTable() {
       </Table>
     </div>
   );
-}
+};
 
 export default ProductsTable;
