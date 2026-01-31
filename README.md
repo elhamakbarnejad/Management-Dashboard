@@ -49,4 +49,3 @@ It is designed as a modern, scalable, and component-based admin dashboard with a
 - The project currently uses mock data and can be easily connected to a real API.
 - Product and user management sections are implemented with reusable table components.
 - The application structure is designed for scalability and maintainability.
-- The repository is currently being prepared and will be published soon.
